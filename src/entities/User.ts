@@ -5,7 +5,10 @@ import {
   Entity,
   PrimaryGeneratedColumn,
   UpdateDateColumn,
+  OneToMany,
 } from 'typeorm';
+import { Bill } from './Bill';
+import { Cart } from './Cart';
 
 @Entity()
 export class User extends BaseEntity {
@@ -28,4 +31,11 @@ export class User extends BaseEntity {
   @Column('timestamptz')
   @UpdateDateColumn()
   updated_at!: Date;
+
+  // Relations
+  @OneToMany((type) => Cart, (cart) => cart.user_id)
+  carts!: [Cart];
+
+  @OneToMany((type) => Bill, (bill) => bill.user_id)
+  bills!: [Bill];
 }
