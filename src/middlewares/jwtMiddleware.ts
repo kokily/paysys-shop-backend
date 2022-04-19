@@ -1,7 +1,7 @@
 import type { Context, Middleware, Next } from 'koa';
 import type { AccessTokenType, RefreshTokenType } from '../types';
 import createToken from '../libs/tokens/createToken';
-import decodeToken from '../libs/tokens/decodeTokent';
+import decodeToken from '../libs/tokens/decodeToken';
 import setCookies from '../libs/tokens/setCookies';
 import tokenRefresh from '../libs/tokens/tokenRefresh';
 import { Token } from '../entities/Token';

@@ -22,7 +22,7 @@ export class User extends BaseEntity {
   password!: string;
 
   @Column('boolean')
-  admin!: string;
+  admin!: boolean;
 
   @Column('timestamptz')
   @CreateDateColumn()

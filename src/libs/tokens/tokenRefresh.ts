@@ -1,6 +1,6 @@
 import type { Context } from 'koa';
 import type { RefreshTokenType } from '../../types';
-import decodeToken from './decodeTokent';
+import decodeToken from './decodeToken';
 import generateToken from './generateToken';
 import setCookies from './setCookies';
 import { Token } from '../../entities/Token';
