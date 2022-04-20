@@ -8,6 +8,7 @@ import result from './result';
 import sign from './sign';
 import upload from './upload';
 import users from './users';
+import weddings from './weddings';
 
 const api = new Router();
 
@@ -20,5 +21,6 @@ api.use('/result', result.routes());
 api.use('/sign', sign.routes());
 api.use('/upload', upload.routes());
 api.use('/users', users.routes());
+api.use('/weddings', weddings.routes());
 
 export default api;
