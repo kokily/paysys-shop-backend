@@ -35,3 +35,10 @@ export type S3ParamsType = {
   Key: string;
   ContentType: string;
 };
+
+export type SortedDataType = {
+  name: string;
+  count: number;
+};
+
+export type ResultType = [string, number];
