@@ -11,7 +11,7 @@ export const authorized: Middleware = async (ctx, next) => {
     return;
   }
 
-  const user = await userRepo.findOne(ctx.state.user.user_id);
+  const user = await userRepo.findOneBy({ id: ctx.state.user.user_id });
 
   if (!user) {
     ctx.status = 401;
@@ -31,7 +31,7 @@ export const authorizedAdmin: Middleware = async (ctx, next) => {
     return;
   }
 
-  const user = await userRepo.findOne(ctx.state.user.user_id);
+  const user = await userRepo.findOneBy({ id: ctx.state.user.user_id });
 
   if (!user) {
     ctx.status = 401;
